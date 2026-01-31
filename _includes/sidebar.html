@@ -1,0 +1,49 @@
+<aside class="sidebar">
+    
+    <!-- Logo -->
+    <div class="sidebar-section">
+        <h1 class="site-logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+        <p class="site-tagline">{{ site.tagline }}</p>
+        <p class="site-tagline-cn">{{ site.tagline_cn }}</p>
+    </div>
+
+    <!-- 关于 -->
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">About / 关于</h3>
+        <div class="about-text">
+            <p>{{ site.author.bio_en }}</p>
+            <p>{{ site.author.bio_cn }}</p>
+        </div>
+    </div>
+
+    <!-- 链接 -->
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">Links / 链接</h3>
+        <ul class="sidebar-links">
+            {% if site.author.email %}
+            <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+            {% endif %}
+            {% if site.author.twitter %}
+            <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">Twitter</a></li>
+            {% endif %}
+            <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+            <li><a href="{{ '/archive' | relative_url }}">Archive / 归档</a></li>
+        </ul>
+    </div>
+
+    <!-- 年份归档 -->
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">Archive / 归档</h3>
+        <ul class="sidebar-archive">
+            {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+            {% for year in postsByYear %}
+            <li>
+                <a href="{{ '/archive' | relative_url }}#{{ year.name }}">
+                    {{ year.name }} <span class="count">({{ year.items | size }})</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</aside>

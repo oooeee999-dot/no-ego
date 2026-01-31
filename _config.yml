@@ -1,0 +1,50 @@
+# ==========================================
+# No Ego - Site Configuration
+# ==========================================
+
+# 基本信息
+title: "No Ego"
+tagline: "No Ego No Enemy"
+tagline_cn: "无我，则无敌"
+description: "一个潮汕企业家的思考记录。关于商业、传统智慧与人生。"
+url: "https://no-ego.com"
+baseurl: ""
+
+# 作者信息
+author:
+  name: "XQ"
+  name_cn: "XQ"
+  bio_en: "I'm XQ, an entrepreneur from Chaoshan, China. I run a shoe factory and explore AI commercialization."
+  bio_cn: "我是XQ，潮汕人，经营鞋厂，探索AI商业化。这里记录我关于商业、传统智慧与人生的思考。"
+  email: "xq@no-ego.com"
+  twitter: ""
+
+# 首页文章数量
+paginate: 10
+paginate_path: "/page/:num/"
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# 时区
+timezone: Asia/Shanghai
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# 插件
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Kramdown 设置
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge

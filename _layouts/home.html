@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+<article class="post">
+    <time class="post-date">{{ post.date | date: "%Y.%m.%d" }}</time>
+    <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <div class="post-content">
+        {{ post.content }}
+    </div>
+</article>
+{% endfor %}
+
+<!-- 分页 -->
+{% if paginator.total_pages > 1 %}
+<nav class="pagination">
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">← Newer / 更新</a>
+    {% else %}
+        <span class="disabled">← Newer / 更新</span>
+    {% endif %}
+    
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Older / 更早 →</a>
+    {% else %}
+        <span class="disabled">Older / 更早 →</span>
+    {% endif %}
+</nav>
+{% endif %}
