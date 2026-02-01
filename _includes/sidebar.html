@@ -7,9 +7,18 @@
         <p class="site-tagline-cn">{{ site.tagline_cn }}</p>
     </div>
 
-    <!-- 关于 -->
+    <!-- 作者介绍 -->
     <div class="sidebar-section">
-        <h3 class="sidebar-title">About / 关于</h3>
+        <h3 class="sidebar-title">{{ site.author.name }} / {{ site.author.name_cn }}</h3>
+        <div class="about-text">
+            <p>{{ site.author.intro_en }}</p>
+            <p>{{ site.author.intro_cn }}</p>
+        </div>
+    </div>
+
+    <!-- 关于 No Ego -->
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">About No Ego</h3>
         <div class="about-text">
             <p>{{ site.author.bio_en }}</p>
             <p>{{ site.author.bio_cn }}</p>
@@ -24,7 +33,7 @@
             <li><a href="mailto:{{ site.author.email }}">Email</a></li>
             {% endif %}
             {% if site.author.twitter %}
-            <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">Twitter</a></li>
+            <li><a href="https://x.com/{{ site.author.twitter }}" target="_blank">X (Twitter)</a></li>
             {% endif %}
             <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
             <li><a href="{{ '/archive' | relative_url }}">Archive / 归档</a></li>
