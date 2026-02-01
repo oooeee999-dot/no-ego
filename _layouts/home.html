@@ -9,7 +9,7 @@ layout: default
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h2>
     <div class="post-content">
-        {{ post.excerpt | truncatewords: 80 }}
+        {{ post.content | strip_html | truncate: 300 }}
     </div>
     <a href="{{ post.url | relative_url }}" class="read-more">继续阅读 / Read more →</a>
 </article>
