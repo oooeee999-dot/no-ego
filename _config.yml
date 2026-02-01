@@ -12,12 +12,14 @@ baseurl: ""
 
 # 作者信息
 author:
-  name: "XQ"
-  name_cn: "XQ"
+  name: "Boehner"
+  name_cn: "黄晓奇"
   bio_en: "One day, I came across the Chinese translation of The Ego is the Enemy, but after reading it, I didn't fully grasp many of the feelings and ideas it conveyed. I knew that sometimes it's necessary to refer to the original text. Then, one day, while reading the Diamond Sutra, it suddenly struck me — if the ego is the enemy, then no ego means no enemy. From the perspective of Chinese culture, the state of non-self is a profound philosophical realm, and I have many reflections on this subject. I thought to myself — it's time I started writing them down."
   bio_cn: "有一天我看到 The Ego is the Enemy 中文版，但是翻译后，很多感觉和思想我没有get到。我知道有时有必要看下原文。后来有一天，我读金刚经，突然发现——the ego is the enemy, no ego 不就 no enemy 了吗。从中国文化来看，无我是一种超级哲学状态，而我，又有很多关于这个方面的感想。我想，我是时候开始记录了。"
-  email: "xq@no-ego.com"
-  twitter: ""
+  intro_en: "I am Huang Xiaoqi, a Teochew native from China. In my philosophy, self-confidence and optimism are the most essential attitudes in life. In my view, the qualities I most admire in a man are composure and humility."
+  intro_cn: "我是黄晓奇，中国潮汕人，在我的理念中，自信乐观是生活中最需要的态度，作为男人，我最欣赏的品质冷静与谦虚。"
+  email: "boehner@qq.com"
+  twitter: "BoehnerHuang"
 
 # 首页文章数量
 paginate: 10
