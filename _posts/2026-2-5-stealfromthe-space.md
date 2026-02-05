@@ -5,6 +5,7 @@ date: 2026-2-5
 ---
 
 
+
 There's a line in an English book that goes something like this: Truth and wisdom are "stolen" from time and space. That was the first time I really felt the weight of the word "steal"—what a perfect way to put it. It might be from *Ego Is the Enemy*.  
 有本英文书里说过一句话，大意是：真理和智慧，都是从时空中"steal"的。这个是我对steal这个词第一次有种感觉，那个人形容得真好。可能是ego is enemy这本书。
 
