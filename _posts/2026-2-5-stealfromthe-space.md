@@ -1,6 +1,6 @@
 ---
 layout: post
-title:真理和智慧，都是从时空中"steal"的
+title:真理和智慧都是从时空中steal的
 date: 2026-2-5
 ---
 
