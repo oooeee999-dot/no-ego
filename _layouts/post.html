@@ -9,6 +9,15 @@ layout: default
         {{ content }}
     </div>
     
+    <!-- 标签 -->
+    {% if page.tags and page.tags.size > 0 %}
+    <div class="post-tags">
+        {% for tag in page.tags %}
+        <a href="{{ '/tags' | relative_url }}#{{ tag }}" class="tag">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
     <!-- 上一篇/下一篇 -->
     <nav class="post-nav">
         {% if page.previous.url %}
