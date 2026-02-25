@@ -535,5 +535,75 @@ a:hover {
 }
 
 .post-single {
+   
     animation: fadeInUp 0.4s ease-out forwards;
+}
+/* ========== 标签样式 ========== */
+.post-tags {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.post-tags .tag {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    background: var(--color-border-light);
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+.post-tags .tag:hover {
+    color: var(--color-text);
+    background: var(--color-border);
+}
+
+/* 标签页面 */
+.tags-page {
+    padding-top: 20px;
+}
+
+.tag-section {
+    margin-bottom: 50px;
+}
+
+.tag-name {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.tag-posts {
+    list-style: none;
+}
+
+.tag-posts li {
+    display: flex;
+    align-items: baseline;
+    padding: 10px 0;
+}
+
+.tag-posts .date {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.tag-posts .title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+}
+
+.tag-posts .title a:hover {
+    color: var(--color-text-light);
 }
