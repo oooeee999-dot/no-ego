@@ -1,0 +1,22 @@
+---
+layout: default
+title: Tags / 标签
+permalink: /tags/
+---
+
+<div class="tags-page">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+    <div class="tag-section" id="{{ tag[0] }}">
+        <h2 class="tag-name">{{ tag[0] }}</h2>
+        <ul class="tag-posts">
+            {% for post in tag[1] %}
+            <li>
+                <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                <span class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
