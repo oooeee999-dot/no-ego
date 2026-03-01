@@ -30,12 +30,13 @@
         <h3 class="sidebar-title">Links / 链接</h3>
         <ul class="sidebar-links">
             {% if site.author.email %}
-            <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+           <li><a href="mailto:{{ site.author.email }}">Email: {{ site.author.email }}</a></li>
             {% endif %}
             {% if site.author.twitter %}
             <li><a href="https://x.com/{{ site.author.twitter }}" target="_blank">X (Twitter)</a></li>
             {% endif %}
             <li><a href="{{ '/archive' | relative_url }}">Archive / 归档</a></li>
+            <li><a href="{{ '/tags' | relative_url }}">Tags / 标签</a></li>
         </ul>
     </div>
 
@@ -54,4 +55,40 @@
         </ul>
     </div>
 
+    <!-- 标签 -->
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">Tags / 标签</h3>
+        <ul class="sidebar-archive">
+            {% assign tags = site.tags | sort %}
+            {% for tag in tags %}
+            <li>
+                <a href="{{ '/tags' | relative_url }}#{{ tag[0] }}">
+                    {{ tag[0] }} <span class="count">({{ tag[1].size }})</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
 </aside>
+```
+
+6. 点 **Commit changes**
+
+---
+
+等 2-3 分钟刷新，侧边栏会显示：
+```
+LINKS / 链接
+Email
+X (Twitter)
+Archive / 归档
+Tags / 标签
+
+ARCHIVE / 归档
+2026 (15)
+
+TAGS / 标签
+潮汕 (1)
+方法论 (3)
+...
