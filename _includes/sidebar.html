@@ -1,11 +1,12 @@
 <aside class="sidebar">
     
-    <!-- Logo -->
-    <div class="sidebar-section">
-        <h1 class="site-logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-        <p class="site-tagline">{{ site.tagline }}</p>
-        <p class="site-tagline-cn">{{ site.tagline_cn }}</p>
-    </div>
+    <!-- Logo + 头像 -->
+<div class="sidebar-section" style="text-align: center;">
+    <img src="{{ '/assets/avatar.png' | relative_url }}" alt="Boehner" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px;">
+    <h1 class="site-logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    <p class="site-tagline">{{ site.tagline }}</p>
+    <p class="site-tagline-cn">{{ site.tagline_cn }}</p>
+</div>
 
     <!-- 作者介绍 -->
     <div class="sidebar-section">
