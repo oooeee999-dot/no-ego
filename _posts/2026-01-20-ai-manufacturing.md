@@ -2,8 +2,10 @@
 layout: post
 title: 真正的智慧只能被触发
 date: 2026-01-20
-tages:情况明决心大方法对
+tags: 情况明决心大方法对
 ---
+
+
 <section id="nice" data-tool="mdnice编辑器" data-website="https://www.mdnice.com" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; padding-left: 10px; padding-right: 10px; background-attachment: scroll; background-clip: border-box; background-color: rgba(0, 0, 0, 0); background-image: none; background-origin: padding-box; background-position-x: left; background-position-y: top; background-repeat: no-repeat; background-size: auto; width: auto; font-family: Optima, 'Microsoft YaHei', PingFangSC-regular, serif; font-size: 16px; color: rgb(0, 0, 0); line-height: 1.5em; word-spacing: 0em; letter-spacing: 0em; word-break: break-word; overflow-wrap: break-word; text-align: left;"><h1 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; display: block;"><span class="prefix" style="display: none;"></span><span class="content" style="font-size: 24px; color: rgb(89, 89, 89); line-height: 1.5em; letter-spacing: 0em; text-align: left; font-weight: bold; display: block;">真正的智慧，不能被传授，只能被触发</span><span class="suffix" style="display: none;"></span></h1>
 <p data-tool="mdnice编辑器" style="color: rgb(89, 89, 89); font-size: 16px; line-height: 1.8em; letter-spacing: 0em; text-align: left; text-indent: 0em; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; padding-top: 8px; padding-bottom: 8px; padding-left: 0px; padding-right: 0px;">每个人都有这种经历——</p>
 <p data-tool="mdnice编辑器" style="color: rgb(89, 89, 89); font-size: 16px; line-height: 1.8em; letter-spacing: 0em; text-align: left; text-indent: 0em; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; padding-top: 8px; padding-bottom: 8px; padding-left: 0px; padding-right: 0px;">一句话，听过很多遍，没有感觉。
