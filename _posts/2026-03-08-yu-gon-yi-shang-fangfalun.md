@@ -2,7 +2,7 @@
 layout: post
 title: 愚公移山中成事的十个方法论
 date: 2026-03-08
-tags: 情况明决心大方法对
+tags: 愚公移山
 ---
 
 
