@@ -1,12 +1,20 @@
 <aside class="sidebar">
     
     <!-- Logo + 头像 -->
-<div class="sidebar-section" style="text-align: center;">
-    <img src="{{ '/assets/avatar.png' | relative_url }}" alt="Boehner" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px;">
-    <h1 class="site-logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-    <p class="site-tagline">{{ site.tagline }}</p>
-    <p class="site-tagline-cn">{{ site.tagline_cn }}</p>
-</div>
+    <div class="sidebar-section" style="text-align: center;">
+        <img src="{{ '/assets/avatar.png' | relative_url }}" alt="Boehner" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px;">
+        <h1 class="site-logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+        <p class="site-tagline">{{ site.tagline }}</p>
+        <p class="site-tagline-cn">{{ site.tagline_cn }}</p>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="sidebar-section">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="搜索 / Search...">
+            <div id="search-results"></div>
+        </div>
+    </div>
 
     <!-- 作者介绍 -->
     <div class="sidebar-section">
@@ -31,7 +39,7 @@
         <h3 class="sidebar-title">Links / 链接</h3>
         <ul class="sidebar-links">
             {% if site.author.email %}
-           <li><a href="mailto:{{ site.author.email }}">Email: {{ site.author.email }}</a></li>
+            <li><a href="mailto:{{ site.author.email }}">Email: {{ site.author.email }}</a></li>
             {% endif %}
             {% if site.author.twitter %}
             <li><a href="https://x.com/{{ site.author.twitter }}" target="_blank">X (Twitter)</a></li>
@@ -72,3 +80,29 @@
     </div>
 
 </aside>
+```
+
+6. 点 **Commit changes**
+
+---
+
+## 第二步：创建搜索数据文件
+
+1. 回到仓库根目录
+2. 点 **Add file** → **Create new file**
+3. 文件名输入：`search.json`
+4. 内容粘贴：
+```
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+  {
+    "title": "{{ post.title | escape }}",
+    "url": "{{ post.url | relative_url }}",
+    "date": "{{ post.date | date: '%Y.%m.%d' }}",
+    "content": {{ post.content | strip_html | jsonify | truncate: 500 }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
