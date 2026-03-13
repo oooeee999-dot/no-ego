@@ -19,7 +19,6 @@
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>○</text></svg>">
-
     {% seo %}
 </head>
 <body>
@@ -29,10 +28,61 @@
             <main class="main-content">
                 {{ content }}
             </main>
-
             <!-- 侧边栏 -->
             {% include sidebar.html %}
         </div>
     </div>
+
+    <!-- 搜索功能 -->
+    <script>
+    (function() {
+        var searchInput = document.getElementById('search-input');
+        var searchResults = document.getElementById('search-results');
+        var posts = [];
+
+        // 加载搜索数据
+        fetch('{{ "/search.json" | relative_url }}')
+            .then(function(response) { return response.json(); })
+            .then(function(data) { posts = data; });
+
+        // 搜索功能
+        searchInput.addEventListener('input', function() {
+            var query = this.value.toLowerCase().trim();
+            searchResults.innerHTML = '';
+            
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            var results = posts.filter(function(post) {
+                return post.title.toLowerCase().includes(query) || 
+                       post.content.toLowerCase().includes(query);
+            }).slice(0, 5);
+
+            if (results.length > 0) {
+                searchResults.style.display = 'block';
+                results.forEach(function(post) {
+                    var div = document.createElement('div');
+                    div.className = 'search-result-item';
+                    div.innerHTML = '<a href="' + post.url + '">' +
+                        '<span class="search-date">' + post.date + '</span>' +
+                        '<span class="search-title">' + post.title + '</span></a>';
+                    searchResults.appendChild(div);
+                });
+            } else {
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = '<div class="search-no-result">没有找到结果</div>';
+            }
+        });
+
+        // 点击外部关闭搜索结果
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+    })();
+    </script>
 </body>
 </html>
