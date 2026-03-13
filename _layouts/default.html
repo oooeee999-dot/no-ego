@@ -42,7 +42,7 @@
         var dataLoaded = false;
 
         // 加载搜索数据
-        fetch('/search.json')
+      fetch('https://no-ego.com/search.json')
             .then(function(response) { return response.json(); })
             .then(function(data) { 
                 posts = data; 
