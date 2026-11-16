@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Archive / 归档
+title: 所有文章记录
 permalink: /archive/
 ---
 
 <div class="archive-page">
+    <h1 class="archive-heading">所有文章记录</h1>
+    <p class="archive-summary">No Ego 已收录 {{ site.posts | size }} 篇文章，按年份列出。</p>
     {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
     
     {% for year in postsByYear %}

@@ -36,7 +36,6 @@
             {% if site.author.twitter %}
             <li><a href="https://x.com/{{ site.author.twitter }}" target="_blank">X (Twitter)</a></li>
             {% endif %}
-            <li><a href="{{ '/archive' | relative_url }}">Archive / 归档</a></li>
             <li><a href="{{ '/tags' | relative_url }}">Tags / 标签</a></li>
         </ul>
     </div>
@@ -45,6 +44,7 @@
     <div class="sidebar-section">
         <h3 class="sidebar-title">Archive / 归档</h3>
         <ul class="sidebar-archive">
+            <li class="all-posts-entry"><a href="{{ '/archive' | relative_url }}">所有文章记录 <span class="count">({{ site.posts | size }})</span></a></li>
             {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
             {% for year in postsByYear %}
             <li>
